@@ -22,7 +22,7 @@ images
 
 The images are in farbfeld[2] format.  There exists a rule in the Makefile to
 convert farbfeld to png, but it requires that farbfeld still be installed.
-farbfeld images can be viewed directly using the lel viewer, among others.
+farbfeld images can be viewed directly using the lel[3] viewer, among others.
 
 building
 
@@ -56,3 +56,4 @@ make avalanche.png
 
 [1] en.wikipedia.org/wiki/Avalanche_effect
 [2] tools.suckless.org/farbfeld
+[3] git.codemadness.org/lel/file/README.html
