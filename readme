@@ -37,6 +37,11 @@ effectively part of the build process.
 
 usage
 
+The hash function implementation is in the main.c file.  By changing
+that function, you can characterize different hashes.  Note that the
+input and output types of that function are configured in config.h,
+see the section on configuration.
+
 You can run avalanche directly like so:
 
 ./avalanche >img.ff
