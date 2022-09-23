@@ -1,0 +1,53 @@
+avalanche
+
+Avalanche is a hash-code visualization program.  It produces images
+known as avalanche diagrams.  These diagrams are a plot of the effects
+of a single bit flip of the input on the output to the hash[1].  The most
+significant bits are to the left and bottom, with the input bits being
+along the X axis, and the output bits being along the Y axis.  If a
+given pixel is green, that indicates that the associated output bit will
+toggle with the associated input bit 50% of the time.  Black indicates it
+either always or never toggles with respect to the input bit.  Anything in
+between indicates some deviation from the 50% ideal.
+
+configuration
+
+Avalanche is configurable through the file config.h.  This file defines
+the width of the input and output, as well as the scale of the image.
+The input and output are in terms of the binary logarithm of the actual
+bit width.  The scale determines how manypixels go into a single cell,
+and is the side length of one cell in pixels.
+
+images
+
+The images are in farbfeld[2] format.  There exists a rule in the Makefile to
+convert farbfeld to png, but it requires that farbfeld still be installed.
+farbfeld images can be viewed directly using the lel viewer, among others.
+
+building
+
+Avalanche uses a simple hand-written makefile to build.  Just run make.
+
+cross-compile
+
+Note that this is a rather portable program, but config.c and config.h
+compile to a program to generate param.h, and thus should be compiled
+for the host architecture rather than the cross architecture.  They are
+effectively part of the build process.
+
+usage
+
+You can run avalanche directly like so:
+
+./avalanche >img.ff
+
+or you can use the makefile targets:
+
+make avalanche.ff
+
+or
+
+make avalanche.png
+
+[1] en.wikipedia.org/wiki/Avalanche_effect
+[2] tools.suckless.org/farbfeld

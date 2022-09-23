@@ -1,0 +1,6 @@
+*.ff
+param.h
+*.o
+avalanche
+config
+*.png
