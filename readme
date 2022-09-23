@@ -15,7 +15,7 @@ configuration
 Avalanche is configurable through the file config.h.  This file defines
 the width of the input and output, as well as the scale of the image.
 The input and output are in terms of the binary logarithm of the actual
-bit width.  The scale determines how manypixels go into a single cell,
+bit width.  The scale determines how many pixels go into a single cell,
 and is the side length of one cell in pixels.
 
 images
